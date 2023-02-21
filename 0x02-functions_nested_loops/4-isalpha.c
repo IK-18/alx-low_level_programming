@@ -1,4 +1,5 @@
-#include "isalpha.h"
+#include "main.h"
+
 /**
  * _isalpha - Return 1 if it is an alphabet, 0 if not.
  * @c: char type letter
