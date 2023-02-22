@@ -27,7 +27,7 @@ void print_times_table(int n)
 				_putchar((c / 10 % 10) + '0');
 				_putchar(c % 10 + '0');
 			}
-			if (c > 9)
+			else if (c > 9)
 			{
 				_putchar(c / 10 + '0');
 				_putchar(c % 10 + '0');
@@ -52,4 +52,5 @@ void print_times_table(int n)
 		_putchar('\n');
 		a++;
 	}
+	return (0);
 }
