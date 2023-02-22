@@ -7,12 +7,13 @@
  */
 int main(void)
 {
-	long int a = 1, b = 1, c;
+	long int a = 1, b = 2, c;
 	int count = 1;
-	
-	while (count <= 100)
+
+	printf("%lu, ", a);
+	while (count <= 97)
 	{
-		if (count != 100)
+		if (count != 97)
 			printf("%lu, ", b);
 		else
 			printf("%lu\n", b);
