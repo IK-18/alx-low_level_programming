@@ -6,14 +6,14 @@
  */
 void times_table(void)
 {
-	int a = 0; /* factor */
-	int b; /* count  */
-	int c; /* computed value */
+	int a = 0;
+	int b;
+	int c;
 
 	while (a < 10)
 	{
 		b = 0;
-		while (c < 10)
+		while (b < 10)
 		{
 			c = a * b;
 			if (c > 9)
