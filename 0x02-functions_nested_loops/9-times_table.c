@@ -4,7 +4,7 @@
  * times_table - Print the 9 times table, starting with 0
  * Return: 0
  */
-int times_table(void)
+void times_table(void)
 {
 	int a = 0; /* factor */
 	int b; /* count  */
