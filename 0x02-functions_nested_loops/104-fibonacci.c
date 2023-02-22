@@ -12,7 +12,7 @@ int main(void)
 	
 	while (count <= 100)
 	{
-		if (count != 50)
+		if (count != 100)
 			printf("%lu, ", b);
 		else
 			printf("%lu\n", b);

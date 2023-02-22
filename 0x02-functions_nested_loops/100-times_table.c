@@ -2,6 +2,7 @@
 
 /**
  * print_times_table - Print the 9 times table, starting with 0
+ * @n: int type number
  * Return: 0
  */
 
@@ -17,9 +18,15 @@ void print_times_table(int n)
 	while (a <= n)
 	{
 		b = 0;
-		while (c < 10)
+		while (b < n)
 		{
 			c = a * b;
+			if (c > 99)
+			{
+				_putchar(c / 100 + '0');
+				_putchar((c / 10 % 10) + '0');
+				_putchar(c % 10 + '0');
+			}
 			if (c > 9)
 			{
 				_putchar(c / 10 + '0');
