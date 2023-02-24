@@ -8,17 +8,23 @@
 
 int main(void)
 {
-	long int i, j, n, max;
+	long int i, n, d;
 
 	n = 612852475143;
-	for (i = 2; i <= n; i++)
+
+	for (i = 1; i <= n; i++)
 	{
-		for (j = 2; j < i; j++)
+		if (n % i == 0)
 		{
-			if (!(i % j == 0))
-				max = i;
+			if (n == i)
+			{
+				printf("%ld\n", i);
+				break;
+			}
+			d = n / i;
+			n = d;
+			i = 1;
 		}
 	}
-	printf("%ld\n", max);
 	return (0);
 }
