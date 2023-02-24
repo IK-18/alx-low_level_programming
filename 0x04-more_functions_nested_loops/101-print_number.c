@@ -18,21 +18,21 @@ void print_number(int n)
 	if (n > 1000)
 	{
 		th = n / 1000;
+		h = n / 100 % 10;
+		t = n / 10 % 10;
+		d = n % 1000;
 		_putchar(th + '0');
 	}
-	if (n > 100)
+	else if (n > 100)
 	{
 		h = n / 100;
-		if (h >= 10)
-			h = h % 10;
+		t = n / 10 % 10;
 		d = n % 100;
 		_putchar(h + '0');
 	}
-	if (n > 10)
+	else if (n > 10)
 	{
 		t = n / 10;
-		if (t >= 10)
-			t = t % 10;
 		d = n % 10;
 		_putchar(t + '0');
 	}

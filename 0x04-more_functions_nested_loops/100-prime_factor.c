@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	unsigned long int i, j, n, max;
+	long int i, j, n, max;
 
 	n = 612852475143;
 	for (i = 2; i <= n; i++)
@@ -19,6 +19,6 @@ int main(void)
 				max = i;
 		}
 	}
-	printf("%lu\n", max);
+	printf("%ld\n", max);
 	return (0);
 }
