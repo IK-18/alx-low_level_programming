@@ -15,10 +15,28 @@ void print_number(int n)
 		n = -n;
 		_putchar(45);
 	}
-	
-	if (i / 10)
-	{
-		print_number(i / 10);
-	}
-	_putchar(i % 10 + '0');
+	if (n > 1000)
+        {
+                th = n / 1000;
+                h = (n / 100) % 10;
+                t = (n / 10) % 10;
+                d = n % 1000;
+                _putchar(th + '0');
+        }
+        else if (n > 100)
+        {
+                h = n / 100;
+                t = (n / 10) % 10;
+                d = n % 100;
+                _putchar(h + '0');
+        }
+        else if (n > 10)
+        {
+                t = n / 10;
+                d = n % 10;
+                _putchar(t + '0');
+        }
+        else
+                d = n % 10;
+        _putchar(d + '0');
 }
