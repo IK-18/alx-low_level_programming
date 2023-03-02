@@ -1,14 +1,13 @@
 #include "main.h"
 
 /**
- * driver - encodes a strnig
+ * leet - encodes a strnig
  * @s: string to be encoded
  * Return: encoded script
  */
 
-char *encoder(char *s)
+char *leet(char *s)
 {
-	
 	int i, j;
 
 	char *a = "aAeEoOtTlL";
