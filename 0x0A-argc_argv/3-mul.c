@@ -12,14 +12,16 @@
 
 int main(int argc, char *argv[])
 {
-	int i, product;
+	int i, j, product;
 
-	product = 1;
-	while (argc-- && argc > 0)
+	if (argc != 3)
 	{
-		i = atoi(argv[argc]);
-		product = product * i;
+		printf("Error\n");
+		return (1);
 	}
+	i = atoi(argv[1]);
+	j = atoi(argv[2]);
+	product = i * j;
 	printf("%d\n", product);
 	return (0);
 }
