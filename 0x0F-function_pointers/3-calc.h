@@ -1,5 +1,5 @@
-#ifndef 3-CALC_H
-#define 3-CALC_H
+#ifndef HEADER
+#define HEADER
 
 int op_add(int a, int b);
 int op_sub(int a, int b);
@@ -8,7 +8,7 @@ int op_div(int a, int b);
 int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
-#endif /* 3-CALC_H */
+#endif /* HEADER */
 
 /**
  * struct op - Struct op
