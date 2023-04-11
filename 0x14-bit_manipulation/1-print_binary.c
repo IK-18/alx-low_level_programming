@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * print_binary - prints a number in binary
+ * @n: decimal number
+ *
+ * Return: nothing
+ */
+
 void print_binary(unsigned long int n)
 {
 	int i;
