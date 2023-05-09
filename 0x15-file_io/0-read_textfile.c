@@ -23,15 +23,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	oFile = open(filename, O_RDONLY);
 	rFile = read(oFile, buff, letters);
+	buff[rFile] = '\0';
+	close(oFile);
 	wFile = write(STDOUT_FILENO, buff, rFile);
 
-	if (oFile == -1 || rFile == -1 || wFile == -1 || wFile != rFile)
+	if (oFile < 0 || rFile < 0 || wFile < 0 || wFile != rFile)
 	{
 		free(buff);
 		return (0);
 	}
 
-	close(oFile);
 	free(buff);
 	return (wFile);
 }
