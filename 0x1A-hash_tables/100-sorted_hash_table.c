@@ -11,11 +11,11 @@ shash_table_t *shash_table_create(unsigned long int size)
 	shash_table_t *new;
 	unsigned long int i;
 
-	new = malloc(sizeof(hash_table_t));
+	new = malloc(sizeof(shash_table_t));
 	if (!new)
 		return (NULL);
 	new->size = size;
-	new->array = calloc(new->size, sizeof(hash_node_t));
+	new->array = calloc(new->size, sizeof(shash_node_t *));
 	if (!(new->array))
 		return (NULL);
 	for (i = 0; i < new->size; i++)
@@ -56,9 +56,14 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		}
 		tmp = tmp->next;
 	}
-	new = malloc(sizeof(hash_node_t));
+	new = malloc(sizeof(shash_node_t));
+	if (!new)
+	{
+		free(copy);
+		return (0);
+	}
 	new->key = strdup(key);
-	if (!new || !(new->key))
+	if (!(new->key))
 	{
 		free(copy);
 		free(new);
@@ -85,7 +90,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	{
 		tmp = ht->shead;
 		while (tmp->snext && strcmp(tmp->snext->key, key) < 0)
-			tmp = tmp->next;
+			tmp = tmp->snext;
 		new->sprev = tmp;
 		new->snext = tmp->snext;
 		if (!(tmp->snext))
